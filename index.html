@@ -5,10 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <title>Document</title>
 </head>
 <body>
-    
+    <div id="app" class="container">
+        <div class="slider-wrapper">
+            
+            <div class="prev">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+
+            <div class="image">
+            </div>
+            <img :src="photos[counter]" alt="">
+            <div class="next" @click = "nextphoto">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+
+            <div class="nav">
+                <i class="fas fa-circle active"></i>
+                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i>
+            </div>
+
+        </div>
+
+    </div>
 
 
 
