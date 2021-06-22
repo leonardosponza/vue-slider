@@ -13,7 +13,7 @@
     <div id="app" class="container">
         <div class="slider-wrapper">
             
-            <div class="prev">
+            <div class="prev" @click = "prevphoto">
                 <i class="fas fa-chevron-left"></i>
             </div>
 
@@ -25,10 +25,8 @@
             </div>
 
             <div class="nav">
-                <i class="fas fa-circle active"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
+        
+                <i :class="(index == counter) ? 'active' : '' " class="fas fa-circle" v-for="(item, index) in photos" @click = "cambiaphoto(index)"></i>
             </div>
 
         </div>

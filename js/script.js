@@ -1,4 +1,4 @@
-const app = new vue(
+const app = new Vue(
     {
         el: '#app',
         data: {
@@ -10,11 +10,20 @@ const app = new vue(
                 'img/img4.jpg'
             ]
         },
-        methods:{
-            nextphoto() {
-                
-                (this.counter == this.photo.lenght - 1) ? this.counter = 0
+        methods: {
+            nextphoto() {               
+                (this.counter == this.photos.length - 1) ? this.counter = 0 
                 :this.counter++;
+            },
+            prevphoto() {
+                if(this.counter == 0){
+                    this.counter == this.photos.length - 1;
+                } else {
+                    this.counter --;
+                }
+            },
+            cambiaphoto(indice){
+                this.counter = indice;
             }
         }
     }
